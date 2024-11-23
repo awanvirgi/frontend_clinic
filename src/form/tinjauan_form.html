@@ -82,33 +82,31 @@
                     <div class="h-1 rounded-full w-1/2 mb-4 bg-main"></div>
                     <div class="mb-2">
                         <h6 class="text-lg text-main font-semibold mb-1">Nama</h6>
-                        <p class="text-main" id="name">Rizki Arya</p>
+                        <p class="text-main" id="name">-</p>
                     </div>
                     <div class="mb-2">
                         <h6 class="text-lg text-main font-semibold mb-1">Jenis Kelamin</h6>
-                        <p class="text-main" id="gender">Perempuan</p>
+                        <p class="text-main" id="gender">-</p>
                     </div>
                     <div class="mb-2">
                         <h6 class="text-lg text-main font-semibold mb-1">Status Perkawinan</h6>
-                        <p class="text-main" id="martialStatus">Belum Menikah</p>
+                        <p class="text-main" id="martialStatus">-</p>
                     </div>
                     <div class="mb-2">
                         <h6 class="text-lg text-main font-semibold mb-1">Tanggal Lahir</h6>
-                        <p class="text-main" id="dateOfBirth">12/01/2024</p>
+                        <p class="text-main" id="dateOfBirth">-</p>
                     </div>
                     <div class="mb-2">
                         <h6 class="text-lg text-main font-semibold mb-1">Alamat Lengkap</h6>
-                        <p class="text-main" id="address">Jalan Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ullam,
-                            perspiciatis minus</p>
+                        <p class="text-main" id="address">-</p>
                     </div>
                     <div class="mb-2">
                         <h6 class="text-lg text-main font-semibold mb-1">Email</h6>
-                        <p class="text-main" id="email">Rizki Arya@gmail.com</p>
+                        <p class="text-main" id="email">-</p>
                     </div>
                     <div class="mb-2">
                         <h6 class="text-lg text-main font-semibold mb-1">No Telepon</h6>
-                        <p class="text-main" id="phoneNumber">08652xxxxxxx67</p>
+                        <p class="text-main" id="phoneNumber">-</p>
                     </div>
                 </div>
                 <div class="mb-6">
@@ -116,7 +114,7 @@
                     <div class="h-1 rounded-full w-1/2 mb-4 bg-main"></div>
                     <div class="mb-2">
                         <h6 class="text-lg text-main font-semibold mb-1">Tipe Layanan</h6>
-                        <p class="text-main" id="service">Suntik KB</p>
+                        <p class="text-main" id="service">-</p>
                     </div>
                     <div class="mb-2">
                         <h6 class="text-lg text-main font-semibold mb-1">Bidan</h6>
@@ -124,19 +122,19 @@
                     </div>
                     <div class="mb-2">
                         <h6 class="text-lg text-main font-semibold mb-1">Tanggal Pemeriksaan</h6>
-                        <p class="text-main" id="date">12/12/2024</p>
+                        <p class="text-main" id="date">-</p>
                     </div>
                     <div class="mb-2">
                         <h6 class="text-lg text-main font-semibold mb-1">Tipe Kunjungan</h6>
-                        <p class="text-main" id="visit">Ke Klinik</p>
+                        <p class="text-main" id="visit">-</p>
                     </div>
                     <div class="mb-2">
                         <h6 class="text-lg text-main font-semibold mb-1">Tipe Pembayaran</h6>
-                        <p class="text-main" id="payment">QRIS</p>
+                        <p class="text-main" id="payment">-</p>
                     </div>
                     <div class="mb-2">
                         <h6 class="text-lg text-main font-semibold mb-1">Atas Nama</h6>
-                        <p class="text-main" id="aname">Murder-wait</p>
+                        <p class="text-main" id="aname">-</p>
                     </div>
                 </div>
                 <div>
@@ -166,7 +164,7 @@
         document.getElementById('email').innerHTML = getDataDiri.email;
         document.getElementById('phoneNumber').innerHTML = getDataDiri.phoneNumber;
         document.getElementById('service').innerHTML = getLayanan.service;
-        document.getElementById('date').innerHTML = moment(getPembayaran.date).format('LLLL');;
+        document.getElementById('date').innerHTML = moment(getPembayaran.date).format('LLLL');
         document.getElementById('visit').innerHTML = getPembayaran.visit;
         document.getElementById('payment').innerHTML = getPembayaran.payment;
         document.getElementById('aname').innerHTML = getPembayaran.aname;
@@ -206,36 +204,34 @@
 
         const sendDataToAPI = async () => {
             try {
-                // Gabungkan data menjadi satu objek
+
                 const payload = {
                     patient: getDataDiri,
                     services: getLayanan.service,
                     midwife_id: getLayanan.midwife,
                     reason:getLayanan.reason,
                     visit: getPembayaran.visit,
-                    date: getPembayaran.date,
+                    date: moment(getPembayaran.date).local().format('YYYY-MM-DD HH:mm:ss'),
                     payment: getPembayaran.payment,
                     aname: getPembayaran.aname,
                     price:harga
                 };
 
-                // Kirim data ke API
-                const response = await fetch("http://localhost:4000/api/appointments/", { // Ganti URL dengan endpoint API Anda
+                const response = await fetch("http://localhost:4000/api/appointments/", { 
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify(payload), // Ubah objek menjadi JSON string
+                    body: JSON.stringify(payload),
                 });
 
-                // Periksa respons dari server
                 if (response.ok) {
                     const result = await response.json();
                     console.log("Data berhasil dikirim:", result);
                     if (getPembayaran.payment == 'qris') {
                         window.location.href = 'payment.html'
                     } else {
-                        window.location.href = 'success.html'
+                        window.location.href = 'succes.html'
                     }
                 } else {
                     const error = await response.json();
@@ -247,7 +243,6 @@
                 alert("Terjadi kesalahan. Silakan coba lagi.");
             }
         };
-
 
     </script>
 </body>
