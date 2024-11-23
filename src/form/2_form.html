@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelayanan</title>
+    <link rel="stylesheet" href="../output.css">
+    <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+        <div class="relative w-full lg:flex lg:h-28 lg:px-8 items-center justify-between">
+            <input type="checkbox" id="menu-toggle" class="peer/hamburger hidden" name="" id="hidden-burder">
+            <div class="flex items-center justify-between w-full lg:w-fit p-4 h-20 lg:h-24">
+                <figure class="flex h-full">
+                    <a class="h-full flex" href="../../index.html">
+                        <img class="object-cover" src="../images/logo.png" alt="logo">
+                    </a>
+                </figure>
+                <label for="menu-toggle" id="" class="relative flex flex-col gap-2 lg:hidden">
+                    <div class="h-[2px] w-8 bg-black"></div>
+                    <div class="h-[2px] w-8 bg-black"></div>
+                    <div class="h-[2px] w-8 bg-black"></div>
+                </label>
+            </div>
+            <nav class="absolute lg:relative p-4 w-full lg:w-fit bg-white hidden peer-checked/hamburger:block lg:block">
+                <ul class="flex flex-col lg:flex-row lg:gap-10 text-xl font-medium">
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="../janji_temu.html">Janji Temu</a>
+                    </li>
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="../tenaga_medis.html">Cek Tenaga Medis</a>
+                    </li>
+                    <li
+                        class="border-t-2 border-b-2 hover:text-main transform duration-150 hover:scale-105 text-lg py-4 px-2 lg:border-0 border-second">
+                        <a href="">Lokasi</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bg-main py-6 px-4">
+            <div class="bg-second p-4">
+                <div class="mb-4">
+                    <ul class="flex justify-between relative">
+                        <div class="h-[2px] w-full bg-main absolute top-1/2 -z-30"></div>
+                        <li
+                            class="bg-main rounded-full flex justify-center items-center h-10 w-10 text-lg font-medium text-second">
+                            1</li>
+                        <li
+                            class="bg-main rounded-full flex justify-center items-center h-10 w-10 text-lg font-medium text-second">
+                            2</li>
+                        <li
+                            class="bg-main rounded-full flex justify-center items-center h-10 w-10 text-lg font-medium text-second">
+                            3</li>
+                        <li
+                            class="bg-main rounded-full flex justify-center items-center h-10 w-10 text-lg font-medium text-second">
+                            4</li>
+                        <li
+                            class="bg-main rounded-full flex justify-center items-center h-10 w-10 text-lg font-medium text-second">
+                            5</li>
+                        <li
+                            class="bg-main rounded-full flex justify-center items-center h-10 w-10 text-lg font-medium text-second">
+                            6</li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <h2 class="text-3xl text-main font-bold mb-2">Layanan dan Keluhan</h2>
+                    <div class="h-1 rounded-full w-1/2 bg-main"></div>
+                </div>
+                <form action="" class="mb-8">
+                    <label for="service" class="flex flex-col mb-2">
+                        <h6 class="text-lg font-medium mb-2 text-main">
+                            Layanan
+                        </h6>
+                        <select name="service" id="service" class="h-10 p-2 rounded-lg">
+                            <option value="persalinan">Persalinan</option>
+                            <option value="pilkb">Suntik & Pil KB</option>
+                            <option value="yogaspa">Yoga & Spa Bayi</option>
+                            <option value="hairsunat">Haircut dan Sunat Bayi</option>
+                            <option value="umum">Umum</option>
+                        </select>
+                    </label>
+                    <label for="midwife" class="flex flex-col mb-2">
+                        <h6 class="text-lg font-medium mb-2 text-main">
+                            Pilih Bidan
+                        </h6>
+                        <select name="midwife" id="midwife" class="h-10 p-2 rounded-lg">
+                            <option value="1">Nining M.Keb</option>
+                        </select>
+                    </label>
+                    <label for="reason" class="flex flex-col mb-2">
+                        <h6 class="text-lg font-medium mb-2 text-main">
+                            Keluhan atau Alasan
+                        </h6>
+                        <textarea name="reason" id="reason" rows="3" class="p-2 rounded-lg"></textarea>
+                    </label>
+                </form>
+                <div class="flex justify-around">
+                    <button onclick="prevStep()"
+                        class="bg-white shadow-md text-main px-8 py-2 rounded-full font-semibold">Before</button>
+                    <button onclick="nextStep()"
+                        class="bg-white shadow-md text-main px-8 py-2 rounded-full font-semibold">Next</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        const nextStep = () => {
+            const layanan = {
+                service: document.getElementById("service").value,
+                midwife: document.getElementById("midwife").value,
+                reason: document.getElementById("reason").value,
+            }
+
+            localStorage.setItem('layanan', JSON.stringify(layanan))
+            window.location.href = '3_form.html'
+        }
+        const prevStep = () => {
+            window.location.href = '1_form.html'
+        }
+    </script>
+
+</body>
+
+</html>

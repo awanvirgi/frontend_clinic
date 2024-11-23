@@ -12,29 +12,29 @@
 <body>
     <div class="">
 
-        <head class="relative w-full">
+        <div class="relative w-full lg:flex lg:h-28 lg:px-8 items-center justify-between">
             <input type="checkbox" id="menu-toggle" class="peer/hamburger hidden" name="" id="hidden-burder">
-            <div class="flex items-center justify-between w-full p-4 h-20 ">
+            <div class="flex items-center justify-between w-full lg:w-fit p-4 h-20 lg:h-24">
                 <figure class="flex h-full">
-                    <a class="h-full flex" href="index.html">
+                    <a class="h-full flex" href="../index.html">
                         <img class="object-cover" src="images/logo.png" alt="logo">
                     </a>
                 </figure>
-                <label for="menu-toggle" id="" class="relative flex flex-col gap-2">
+                <label for="menu-toggle" id="" class="relative flex flex-col gap-2 lg:hidden">
                     <div class="h-[2px] w-8 bg-black"></div>
                     <div class="h-[2px] w-8 bg-black"></div>
                     <div class="h-[2px] w-8 bg-black"></div>
                 </label>
             </div>
-            <nav class="absolute p-4 w-full bg-white hidden peer-checked/hamburger:block">
-                <ul class="flex flex-col">
-                    <li class="border-t-2 py-4 px-2 border-second"><a href="index.html">Home</a></li>
-                    <li class="border-t-2 py-4 px-2 border-second"><a href="janji_temu.html">Janji Temu</a></li>
-                    <li class="border-t-2 py-4 px-2 border-second"><a href="tenaga_medis.html">Cek Tenaga Medis</a></li>
-                    <li class="border-t-2 border-b-2 py-4 px-2 border-second"><a href="">Lokasi</a></li>
+            <nav class="absolute lg:relative p-4 w-full lg:w-fit bg-white hidden peer-checked/hamburger:block lg:block">
+                <ul class="flex flex-col lg:flex-row lg:gap-10 text-xl font-medium">
+                    <li class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second"><a href="../index.html">Home</a></li>
+                    <li class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second"><a href="janji_temu.html">Janji Temu</a></li>
+                    <li class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second"><a href="tenaga_medis.html">Cek Tenaga Medis</a></li>
+                    <li class="border-t-2 border-b-2 hover:text-main transform duration-150 hover:scale-105 text-lg py-4 px-2 lg:border-0 border-second"><a href="">Lokasi</a></li>
                 </ul>
             </nav>
-        </head>
+        </div>
         <main class="h-full">
 
             <head class="h-80">
@@ -43,11 +43,12 @@
                 </figure>
                 <div class="flex flex-col items-center py-4 bg-second">
                     <h1 class="text-2xl font-bold mb-4">Janji Temu</h1>
-                    <div>
+                    <a href="form/start_form.html">
                         <button class="bg-main px-8 py-3 font-semibold text-lg rounded-2xl text-white">Buat
                             Jadwal Sekarang !</button>
-                    </div>
+                    </a>
                 </div>
+                
             </head>
             <section class="py-8 px-14 text-lg font-medium">
                 <p>
