@@ -9,10 +9,12 @@
     <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/min/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/locale/id.js"></script>
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
-    <div>
+    <div class="flex flex-col w-full">
         <div class="relative w-full lg:flex lg:h-28 lg:px-8 items-center justify-between">
             <input type="checkbox" id="menu-toggle" class="peer/hamburger hidden" name="" id="hidden-burder">
             <div class="flex items-center justify-between w-full lg:w-fit p-4 h-20 lg:h-24">
@@ -31,7 +33,7 @@
                 <ul class="flex flex-col lg:flex-row lg:gap-10 text-xl font-medium">
                     <li
                         class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
-                        <a href="../index.html">Home</a>
+                        <a href="../../index.html">Home</a>
                     </li>
                     <li
                         class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
@@ -48,7 +50,7 @@
                 </ul>
             </nav>
         </div>
-        <div class="bg-main py-6 px-4">
+        <div class="bg-main py-6 px-4 self-center w-full max-w-[600px]">
             <div class="bg-second p-4">
                 <div class="mb-4">
                     <ul class="flex justify-between relative">
@@ -211,7 +213,7 @@
                     midwife_id: getLayanan.midwife,
                     reason:getLayanan.reason,
                     visit: getPembayaran.visit,
-                    date: moment(getPembayaran.date).local().format('YYYY-MM-DD HH:mm:ss'),
+                    date: moment(getPembayaran.date).format('YYYY-MM-DD HH:mm:ss'),
                     payment: getPembayaran.payment,
                     aname: getPembayaran.aname,
                     price:harga
