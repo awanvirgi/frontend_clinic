@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulai Daftar Janji Temu</title>
+    <link rel="stylesheet" href="../output.css">
+    <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="flex flex-col w-full">
+        <div class="relative w-full lg:flex lg:h-28 lg:px-8 items-center justify-between">
+            <input type="checkbox" id="menu-toggle" class="peer/hamburger hidden" name="" id="hidden-burder">
+            <div class="flex items-center justify-between w-full lg:w-fit p-4 h-20 lg:h-24">
+                <figure class="flex h-full">
+                    <a class="h-full flex" href="../../index.html">
+                        <img class="object-cover" src="../images/logo.png" alt="logo">
+                    </a>
+                </figure>
+                <label for="menu-toggle" id="" class="relative flex flex-col gap-2 lg:hidden">
+                    <div class="h-[2px] w-8 bg-black"></div>
+                    <div class="h-[2px] w-8 bg-black"></div>
+                    <div class="h-[2px] w-8 bg-black"></div>
+                </label>
+            </div>
+            <nav class="absolute lg:relative p-4 w-full lg:w-fit bg-white hidden peer-checked/hamburger:block lg:block">
+                <ul class="flex flex-col lg:flex-row lg:gap-10 text-xl font-medium">
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="../../index.html">Home</a>
+                    </li>
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="../janji_temu.html">Janji Temu</a>
+                    </li>
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="../tenaga_medis.html">Cek Tenaga Medis</a>
+                    </li>
+                    <li
+                        class="border-t-2 border-b-2 hover:text-main transform duration-150 hover:scale-105 text-lg py-4 px-2 lg:border-0 border-second">
+                        <a href="">Lokasi</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <main class="bg-main text-white py-4 px-8 self-center w-full max-w-[600px]">
+            <div class="mb-8">
+                <h1 class="text-2xl font-semibold mb-2">Minta Janji Temu</h1>
+                <div class="h-[2px] w-1/2 rounded-lg bg-white"></div>
+            </div>
+            <div>
+                <p class="mb-4">
+                    Untuk mengisi formulir ini, ada beberapa syarat yang anda perlukan diantaranya:
+                </p>
+                <div class="mb-4">
+                    <li>Berusia 18 Tahun atau Lebih</li>
+                    <li>lorem</li>
+                    <li>lorem</li>
+                </div>
+                <p class="mb-8">
+                    Proses permintaan janji temu ini hanya memakan waktu sekitar 5-10 menit dalam pengisian fromulir.
+                    Janji temu anda akan diproses dalam jangka waktu 1 hingga 2 hari kerja
+                </p>
+            </div>
+            <a href="1_form.html" class="flex justify-center w-full mb-4">
+                <button class="bg-white text-main px-8 py-3 font-semibold text-lg rounded-2xl">Buat
+                    Jadwal Sekarang !</button>
+            </a>
+        </main>
+        <footer>
+            <div class="py-8">
+                <div class="px-8 mb-4 bg-slate-200 h-20 flex justify-around items-center">
+                    <a href="facebook.com" class="text-slate-400" style="font-size: 42px;">
+                        <i class="fa-brands fa-facebook "></i>
+                    </a>
+                    <a href="instagram.com" class="text-slate-400" style="font-size: 42px;">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="youtube.com" class="text-slate-400" style="font-size: 42px;">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+                <ul class="px-8 flex flex-col gap-3">
+                    <li><a href="../janji_temu.html" class="underline hover:text-blue-200">Buat Janji Temu</a></li>
+                    <li><a href="../tenaga_medis.html" class="underline hover:text-blue-200">Cek Tenaga Medis</a></li>
+                    <li><a href="" class="underline hover:text-blue-200">Lokasi</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

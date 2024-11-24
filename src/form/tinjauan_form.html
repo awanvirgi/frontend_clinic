@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinjauan Informasi</title>
+    <link rel="stylesheet" href="../output.css">
+    <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/min/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/locale/id.js"></script>
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="flex flex-col w-full">
+        <div class="relative w-full lg:flex lg:h-28 lg:px-8 items-center justify-between">
+            <input type="checkbox" id="menu-toggle" class="peer/hamburger hidden" name="" id="hidden-burder">
+            <div class="flex items-center justify-between w-full lg:w-fit p-4 h-20 lg:h-24">
+                <figure class="flex h-full">
+                    <a class="h-full flex" href="../../index.html">
+                        <img class="object-cover" src="../images/logo.png" alt="logo">
+                    </a>
+                </figure>
+                <label for="menu-toggle" id="" class="relative flex flex-col gap-2 lg:hidden">
+                    <div class="h-[2px] w-8 bg-black"></div>
+                    <div class="h-[2px] w-8 bg-black"></div>
+                    <div class="h-[2px] w-8 bg-black"></div>
+                </label>
+            </div>
+            <nav class="absolute lg:relative p-4 w-full lg:w-fit bg-white hidden peer-checked/hamburger:block lg:block">
+                <ul class="flex flex-col lg:flex-row lg:gap-10 text-xl font-medium">
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="../../index.html">Home</a>
+                    </li>
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="../janji_temu.html">Janji Temu</a>
+                    </li>
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="../tenaga_medis.html">Cek Tenaga Medis</a>
+                    </li>
+                    <li
+                        class="border-t-2 border-b-2 hover:text-main transform duration-150 hover:scale-105 text-lg py-4 px-2 lg:border-0 border-second">
+                        <a href="">Lokasi</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bg-main py-6 px-4 self-center w-full max-w-[600px]">
+            <div class="bg-second p-4">
+                <div class="mb-4">
+                    <ul class="flex justify-between relative">
+                        <div class="h-[2px] w-full bg-main absolute top-1/2 -z-30"></div>
+                        <li
+                            class="bg-main rounded-full flex justify-center items-center h-10 w-10 text-lg font-medium text-second">
+                            1</li>
+                        <li
+                            class="bg-main rounded-full flex justify-center items-center h-10 w-10 text-lg font-medium text-second">
+                            2</li>
+                        <li
+                            class="bg-main rounded-full flex justify-center items-center h-10 w-10 text-lg font-medium text-second">
+                            3</li>
+                        <li
+                            class="bg-main rounded-full flex justify-center items-center h-10 w-10 text-lg font-medium text-second">
+                            4</li>
+                        <li
+                            class="bg-main rounded-full flex justify-center items-center h-10 w-10 text-lg font-medium text-second">
+                            5</li>
+                        <li
+                            class="bg-main rounded-full flex justify-center items-center h-10 w-10 text-lg font-medium text-second">
+                            6</li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <h2 class="text-3xl text-main font-bold mb-2">Tinjauan Informasi</h2>
+                    <div class="h-1 rounded-full w-1/2 bg-main"></div>
+                </div>
+                <div>
+                    <h4 class="text-lg text-main font-medium mb-1">Informasi Pasien</h4>
+                    <div class="h-1 rounded-full w-1/2 mb-4 bg-main"></div>
+                    <div class="mb-2">
+                        <h6 class="text-lg text-main font-semibold mb-1">Nama</h6>
+                        <p class="text-main" id="name">-</p>
+                    </div>
+                    <div class="mb-2">
+                        <h6 class="text-lg text-main font-semibold mb-1">Jenis Kelamin</h6>
+                        <p class="text-main" id="gender">-</p>
+                    </div>
+                    <div class="mb-2">
+                        <h6 class="text-lg text-main font-semibold mb-1">Status Perkawinan</h6>
+                        <p class="text-main" id="martialStatus">-</p>
+                    </div>
+                    <div class="mb-2">
+                        <h6 class="text-lg text-main font-semibold mb-1">Tanggal Lahir</h6>
+                        <p class="text-main" id="dateOfBirth">-</p>
+                    </div>
+                    <div class="mb-2">
+                        <h6 class="text-lg text-main font-semibold mb-1">Alamat Lengkap</h6>
+                        <p class="text-main" id="address">-</p>
+                    </div>
+                    <div class="mb-2">
+                        <h6 class="text-lg text-main font-semibold mb-1">Email</h6>
+                        <p class="text-main" id="email">-</p>
+                    </div>
+                    <div class="mb-2">
+                        <h6 class="text-lg text-main font-semibold mb-1">No Telepon</h6>
+                        <p class="text-main" id="phoneNumber">-</p>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <h4 class="text-lg text-main font-medium mb-1">Informasi Layanan</h4>
+                    <div class="h-1 rounded-full w-1/2 mb-4 bg-main"></div>
+                    <div class="mb-2">
+                        <h6 class="text-lg text-main font-semibold mb-1">Tipe Layanan</h6>
+                        <p class="text-main" id="service">-</p>
+                    </div>
+                    <div class="mb-2">
+                        <h6 class="text-lg text-main font-semibold mb-1">Bidan</h6>
+                        <p class="text-main" id="midwife">Nining M.Keb</p>
+                    </div>
+                    <div class="mb-2">
+                        <h6 class="text-lg text-main font-semibold mb-1">Tanggal Pemeriksaan</h6>
+                        <p class="text-main" id="date">-</p>
+                    </div>
+                    <div class="mb-2">
+                        <h6 class="text-lg text-main font-semibold mb-1">Tipe Kunjungan</h6>
+                        <p class="text-main" id="visit">-</p>
+                    </div>
+                    <div class="mb-2">
+                        <h6 class="text-lg text-main font-semibold mb-1">Tipe Pembayaran</h6>
+                        <p class="text-main" id="payment">-</p>
+                    </div>
+                    <div class="mb-2">
+                        <h6 class="text-lg text-main font-semibold mb-1">Atas Nama</h6>
+                        <p class="text-main" id="aname">-</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="h-1 rounded-full w-full mb-4 bg-main"></div>
+                    <h4 class="text-lg font-semibold text-main">Harga</h4>
+                    <h2 class="mb-8 text-5xl font-bold text-main" id="harga"></h2>
+                </div>
+                <div class="flex justify-around">
+                    <button onclick="prevStep()"
+                        class="bg-white shadow-md text-main px-8 py-2 rounded-full font-semibold">Sebelum</button>
+                    <button onclick="sendDataToAPI()"
+                        class="bg-white shadow-md text-main px-8 py-2 rounded-full font-semibold">Konfirmasi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        moment.locale("id")
+        const getDataDiri = JSON.parse(localStorage.getItem('dataDiri'))
+        const getLayanan = JSON.parse(localStorage.getItem('layanan'))
+        const getPembayaran = JSON.parse(localStorage.getItem('pembayaran'))
+        document.getElementById('name').innerHTML = getDataDiri.name;
+        document.getElementById('gender').innerHTML = getDataDiri.gender;
+        document.getElementById('martialStatus').innerHTML = getDataDiri.martialStatus;
+        document.getElementById('dateOfBirth').innerHTML = getDataDiri.dateOfBirth;
+        document.getElementById('address').innerHTML = getDataDiri.address;
+        document.getElementById('email').innerHTML = getDataDiri.email;
+        document.getElementById('phoneNumber').innerHTML = getDataDiri.phoneNumber;
+        document.getElementById('service').innerHTML = getLayanan.service;
+        document.getElementById('date').innerHTML = moment(getPembayaran.date).format('LLLL');
+        document.getElementById('visit').innerHTML = getPembayaran.visit;
+        document.getElementById('payment').innerHTML = getPembayaran.payment;
+        document.getElementById('aname').innerHTML = getPembayaran.aname;
+
+        const prevStep = () => {
+            window.location.href = '2_form.html'
+        }
+
+        const priceHandler = () => {
+            let price = 0;
+
+            if (!getPembayaran || !getLayanan) {
+                console.error("Data pembayaran atau layanan tidak valid.");
+                return price;
+            }
+
+            const visitPrice = {
+                home: 30000,
+                online: 10000
+            };
+            price += visitPrice[getPembayaran.visit] || 0;
+
+            const servicePrice = {
+                persalinan: 120000,
+                pilkb: 50000,
+                yogaspa: 45000,
+                hairsunat: 60000,
+                umum: 30000
+            };
+            price += servicePrice[getLayanan.service] || 0;
+
+            return price;
+        };
+        let harga = priceHandler()
+        let rupiah = "Rp. " + harga;
+        document.getElementById("harga").innerHTML = rupiah
+
+        const sendDataToAPI = async () => {
+            try {
+
+                const payload = {
+                    patient: getDataDiri,
+                    services: getLayanan.service,
+                    midwife_id: getLayanan.midwife,
+                    reason:getLayanan.reason,
+                    visit: getPembayaran.visit,
+                    date: moment(getPembayaran.date).format('YYYY-MM-DD HH:mm:ss'),
+                    payment: getPembayaran.payment,
+                    aname: getPembayaran.aname,
+                    price:harga
+                };
+
+                const response = await fetch("http://localhost:4000/api/appointments/", { 
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(payload),
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log("Data berhasil dikirim:", result);
+                    if (getPembayaran.payment == 'qris') {
+                        window.location.href = 'payment.html'
+                    } else {
+                        window.location.href = 'succes.html'
+                    }
+                } else {
+                    const error = await response.json();
+                    console.error("Gagal mengirim data:", error);
+                    alert("Gagal mengirim data. Silakan coba lagi.");
+                }
+            } catch (err) {
+                console.error("Terjadi kesalahan:", err);
+                alert("Terjadi kesalahan. Silakan coba lagi.");
+            }
+        };
+
+    </script>
+</body>
+
+</html>

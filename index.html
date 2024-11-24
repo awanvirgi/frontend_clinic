@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Klinik Nining</title>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="src/output.css">
     <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
             <div class="flex items-center justify-between w-full lg:w-fit p-4 h-20 lg:h-24">
                 <figure class="flex h-full">
                     <a class="h-full flex" href="index.html">
-                        <img class="object-cover" src="images/logo.png" alt="logo">
+                        <img class="object-cover" src="src/images/logo.png" alt="logo">
                     </a>
                 </figure>
                 <label for="menu-toggle" id="" class="relative flex flex-col gap-2 lg:hidden">
@@ -27,10 +28,18 @@
             </div>
             <nav class="absolute lg:relative p-4 w-full lg:w-fit bg-white hidden peer-checked/hamburger:block lg:block">
                 <ul class="flex flex-col lg:flex-row lg:gap-10 text-xl font-medium">
-                    <li class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-xl lg:border-0 border-second"><a href="index.html">Home</a></li>
-                    <li class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-xl lg:border-0 border-second"><a href="janji_temu.html">Janji Temu</a></li>
-                    <li class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-xl lg:border-0 border-second"><a href="tenaga_medis.html">Cek Tenaga Medis</a></li>
-                    <li class="border-t-2 border-b-2 hover:text-main transform duration-150 hover:scale-105 text-xl py-4 px-2 lg:border-0 border-second"><a href="">Lokasi</a></li>
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="index.html">Home</a></li>
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="src/janji_temu.html">Janji Temu</a></li>
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="src/tenaga_medis.html">Cek Tenaga Medis</a></li>
+                    <li
+                        class="border-t-2 border-b-2 hover:text-main transform duration-150 hover:scale-105 text-lg py-4 px-2 lg:border-0 border-second">
+                        <a href="">Lokasi</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,21 +48,23 @@
                 <h1 class="text-3xl/[40px] font-bold text-white text text-center">Mengawal Kesehatan dengan Sentuhan
                     Lembut</h1>
             </div>
-            <div class="p-8">
-                <div class="mb-8">
+            <div class="p-8 lg:px-14 border-2 w-full lg:flex gap-2 items-center">
+                <div class="lg:max-w-[800px] w-full flex-1 mb-4 lg:mb-0">
                     <div class="h-40 w-full bg-second flex justify-center">
-                        <img class="object-cover" src="images/janji_temu_art.png" alt="janji_temu_art">
+                        <img class="object-cover" src="src/images/janji_temu_art.png" alt="janji_temu_art">
                     </div>
                     <div class="text-center p-4 bg-slate-200">
                         <h2 class="text-2xl font-bold">Janji Temu</h2>
                         <p class="mb-4">Dapatkan Perawatan langsung atau Virtual yang anda perlukan</p>
-                        <button class="bg-main px-8 py-3 font-semibold text-xl rounded-2xl text-white">Buat
-                            Jadwal</button>
+                        <a href="src/form/start_form.html">
+                            <button class="bg-main px-8 py-3 font-semibold text-xl rounded-2xl text-white">Buat
+                                Jadwal</button>
+                        </a>
                     </div>
                 </div>
-                <div class="mb-8">
+                <div class="lg:max-w-[800px] w-full flex-1 mb-4 lg:mb-0">
                     <div class="h-40 w-full bg-second flex justify-center">
-                        <img class="object-cover" src="images/tenaga_medis_art.png" alt="janji_temu_art">
+                        <img class="object-cover" src="src/images/tenaga_medis_art.png" alt="janji_temu_art">
                     </div>
                     <div class="text-center p-4 bg-slate-200">
                         <h2 class="text-2xl font-bold">Tenaga Medis</h2>
@@ -62,9 +73,9 @@
                             Medis</button>
                     </div>
                 </div>
-                <div class="mb-8">
+                <div class="lg:max-w-[800px] w-full flex-1 mb-4 lg:mb-0">
                     <div class="h-40 w-full bg-second flex justify-center">
-                        <img class="object-cover" src="images/janji_temu_art.png" alt="janji_temu_art">
+                        <img class="object-cover" src="src/images/janji_temu_art.png" alt="janji_temu_art">
                     </div>
                     <div class="text-center p-4 bg-slate-200">
                         <h2 class="text-2xl font-bold">Lokasi Klinik</h2>
@@ -74,29 +85,29 @@
                     </div>
                 </div>
             </div>
-            <div class="py-8">
-                <div class="bg-main p-8 mb-4">
+            <div class="py-8 lg:flex lg:gap-2 lg:px-14 flex-wrap">
+                <div class="bg-main p-8 lg:min-w-[490px] w-full mb-4 flex-1">
                     <figure>
                         <i class="fa-solid fa-person-pregnant text-white mb-2" style="font-size:48px;"></i>
                     </figure>
                     <h1 class="font-bold mb-4 text-2xl text-white">Persalinan 24 Jam</h1>
                     <p class="font-medium">Layanan Persalinan Siaga 24 Jam untuk Kesehatan Ibu dan Bayi</p>
                 </div>
-                <div class="bg-main p-8 mb-4">
+                <div class="bg-main p-8 mb-4 lg:min-w-[490px] w-full flex-1">
                     <figure>
                         <i class="fa-solid fa-house-chimney-window text-white mb-2" style="font-size:48px;"></i>
                     </figure>
                     <h1 class="font-bold mb-4 text-2xl text-white">Pil KB dan Suntik KB</h1>
                     <p class="font-medium">Pilihan Cerdas untuk Perencanaan Keluarga yg lebih baik</p>
                 </div>
-                <div class="bg-main p-8 mb-4">
+                <div class="bg-main p-8 mb-4 lg:min-w-[490px] w-full flex-1">
                     <figure>
                         <i class="fa-solid fa-person-breastfeeding text-white mb-2" style="font-size:48px;"></i>
                     </figure>
                     <h1 class="font-bold mb-4 text-2xl text-white">Yoga & Baby Spa</h1>
                     <p class="font-medium">Perawatan Relaksasi untuk Ibu dan Bayi yang Sehat dan Bahagia</p>
                 </div>
-                <div class="bg-main p-8">
+                <div class="bg-main p-8 mb-4 lg:min-w-[490px] w-full flex-1">
                     <figure>
                         <i class="fa-solid fa-baby text-white mb-2" style="font-size:48px;"></i>
                     </figure>
@@ -120,8 +131,8 @@
                     </a>
                 </div>
                 <ul class="px-8 flex flex-col gap-3">
-                    <li><a href="janji_temu.html" class="underline hover:text-blue-200">Buat Janji Temu</a></li>
-                    <li><a href="tenaga_medis.html" class="underline hover:text-blue-200">Cek Tenaga Medis</a></li>
+                    <li><a href="src/janji_temu.html" class="underline hover:text-blue-200">Buat Janji Temu</a></li>
+                    <li><a href="src/tenaga_medis.html" class="underline hover:text-blue-200">Cek Tenaga Medis</a></li>
                     <li><a href="" class="underline hover:text-blue-200">Lokasi</a></li>
                 </ul>
             </div>

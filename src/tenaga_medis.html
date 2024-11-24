@@ -7,47 +7,66 @@
     <title>Tenaga Medis</title>
     <link rel="stylesheet" href="output.css">
     <script src="https://kit.fontawesome.com/c5b31b49c9.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <div>
-
-        <head class="relative w-full">
+        <div class="relative w-full lg:flex lg:h-28 lg:px-8 items-center justify-between">
             <input type="checkbox" id="menu-toggle" class="peer/hamburger hidden" name="" id="hidden-burder">
-            <div class="flex items-center justify-between w-full p-4 h-20 ">
+            <div class="flex items-center justify-between w-full lg:w-fit p-4 h-20 lg:h-24">
                 <figure class="flex h-full">
-                    <a class="h-full flex" href="index.html">
+                    <a class="h-full flex" href="../index.html">
                         <img class="object-cover" src="images/logo.png" alt="logo">
                     </a>
                 </figure>
-                <label for="menu-toggle" id="" class="relative flex flex-col gap-2">
+                <label for="menu-toggle" id="" class="relative flex flex-col gap-2 lg:hidden">
                     <div class="h-[2px] w-8 bg-black"></div>
                     <div class="h-[2px] w-8 bg-black"></div>
                     <div class="h-[2px] w-8 bg-black"></div>
                 </label>
             </div>
-            <nav class="absolute p-4 w-full bg-white hidden peer-checked/hamburger:block">
-                <ul class="flex flex-col">
-                    <li class="border-t-2 py-4 px-2 border-second"><a href="index.html">Home</a></li>
-                    <li class="border-t-2 py-4 px-2 border-second"><a href="janji_temu.html">Janji Temu</a></li>
-                    <li class="border-t-2 py-4 px-2 border-second"><a href="tenaga_medis.html">Cek Tenaga Medis</a></li>
-                    <li class="border-t-2 border-b-2 py-4 px-2 border-second"><a href="">Lokasi</a></li>
-                </ul>   
+            <nav class="absolute lg:relative p-4 w-full lg:w-fit bg-white hidden peer-checked/hamburger:block lg:block">
+                <ul class="flex flex-col lg:flex-row lg:gap-10 text-xl font-medium">
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="../index.html">Home</a></li>
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="janji_temu.html">Janji Temu</a></li>
+                    <li
+                        class="border-t-2 py-4 px-2 hover:text-main transform duration-150 hover:scale-105 text-lg lg:border-0 border-second">
+                        <a href="tenaga_medis.html">Cek Tenaga Medis</a></li>
+                    <li
+                        class="border-t-2 border-b-2 hover:text-main transform duration-150 hover:scale-105 text-lg py-4 px-2 lg:border-0 border-second">
+                        <a href="">Lokasi</a></li>
+                </ul>
             </nav>
+        </div>
+        <nav class="absolute p-4 w-full bg-white hidden peer-checked/hamburger:block">
+            <ul class="flex flex-col">
+                <li class="border-t-2 py-4 px-2 border-second"><a href="../index.html">Home</a></li>
+                <li class="border-t-2 py-4 px-2 border-second"><a href="janji_temu.html">Janji Temu</a></li>
+                <li class="border-t-2 py-4 px-2 border-second"><a href="tenaga_medis.html">Cek Tenaga Medis</a></li>
+                <li class="border-t-2 border-b-2 py-4 px-2 border-second"><a href="">Lokasi</a></li>
+            </ul>
+        </nav>
         </head>
         <main class="h-full">
             <div class="px-10 text-main bg-second py-2">
-                <h1 class="text-xl/[32px] font-bold text- text text-center">Tenaga Medis Berpengalaman, Siap Melayani dengan Hati dan Profesionalisme</h1>
+                <h1 class="text-xl/[32px] font-bold text- text text-center">Tenaga Medis Berpengalaman, Siap Melayani
+                    dengan Hati dan Profesionalisme</h1>
             </div>
-            <section class="py-6 px-2">
-                <h2 class="text-2xl font-bold text-center mb-6">Tenaga Medis</h2>
+            <h2 class="text-2xl font-bold text-center mt-6">Tenaga Medis</h2>
+            <section class="py-6 px-2 lg:flex gap-4 lg:px-14">
                 <div class="flex bg-second mb-4 py-4 px-2 rounded-xl gap-2">
                     <figure class="w-72">
                         <img class="object-cover h-full w-full rounded-sm" src="images/orang1.png" alt="">
                     </figure>
                     <div class="flex-shrink">
                         <h3 class="text-xl font-semibold">Bidan Nining</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa iste beatae provident quos, in veritatis</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa iste beatae provident quos, in
+                            veritatis</p>
                         <div class="h-[2px] w-1/2 bg-main mt-3"></div>
                     </div>
                 </div>
@@ -57,7 +76,8 @@
                     </figure>
                     <div class="flex-shrink">
                         <h3 class="text-xl font-semibold">Bidan Nining</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa iste beatae provident quos, in veritatis</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa iste beatae provident quos, in
+                            veritatis</p>
                         <div class="h-[2px] w-1/2 bg-main mt-3"></div>
                     </div>
                 </div>
@@ -67,7 +87,8 @@
                     </figure>
                     <div class="flex-shrink">
                         <h3 class="text-xl font-semibold">Bidan Nining</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa iste beatae provident quos, in veritatis</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa iste beatae provident quos, in
+                            veritatis</p>
                         <div class="h-[2px] w-1/2 bg-main mt-3"></div>
                     </div>
                 </div>
