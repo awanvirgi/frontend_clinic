@@ -15,7 +15,7 @@
 
 <body>
 
-    
+
     <div class="flex flex-col w-full">
         <div class="relative w-full lg:flex lg:h-28 lg:px-8 items-center justify-between">
             <input type="checkbox" id="menu-toggle" class="peer/hamburger hidden" name="" id="hidden-burder">
@@ -157,10 +157,10 @@
     </div>
     <div class="cookie-box">
         <span class="btn-2">&times;</span>
-        <img  src="../images/sukses.gif" alt=""> 
+        <img src="../images/sukses.gif" alt="">
         <h4 class="pop-up-text">PEMBAYARAN BERHASIL</h4>
         <h2>Janji temu berhasil dibuat silahkan menunggu 1 sampai 2 hari kedepan</h2>
-        
+
     </div>
     <script>
         moment.locale("id")
@@ -220,15 +220,15 @@
                     patient: getDataDiri,
                     services: getLayanan.service,
                     midwife_id: getLayanan.midwife,
-                    reason:getLayanan.reason,
+                    reason: getLayanan.reason,
                     visit: getPembayaran.visit,
                     date: moment(getPembayaran.date).format('YYYY-MM-DD HH:mm:ss'),
                     payment: getPembayaran.payment,
                     aname: getPembayaran.aname,
-                    price:harga
+                    price: harga
                 };
 
-                const response = await fetch("http://localhost:4000/api/appointments/", { 
+                const response = await fetch("http://localhost:4000/api/appointments/", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -239,11 +239,10 @@
                 if (response.ok) {
                     const result = await response.json();
                     console.log("Data berhasil dikirim:", result);
-                    if (getPembayaran.payment == 'qris') {
-                        window.location.href = 'payment.html'
-                    } else {
-                        window.location.href = 'succes.html'
-                    }
+                    document.querySelector('.cookie-box').classList.add('active');
+                    localStorage.removeItem('dataDiri');
+                    localStorage.removeItem('layanan');
+                    localStorage.removeItem('pembayaran');
                 } else {
                     const error = await response.json();
                     console.error("Gagal mengirim data:", error);
@@ -254,12 +253,9 @@
                 alert("Terjadi kesalahan. Silakan coba lagi.");
             }
         };
-
-        document.querySelector('.btn-1').onclick = () =>{
-            document.querySelector('.cookie-box').classList.add('active');
-        } 
-        document.querySelector('.btn-2').onclick = () =>{
+        document.querySelector('.btn-2').onclick = () => {
             document.querySelector('.cookie-box').classList.remove('active');
+            window.location.href = "../../index.html"
         }
 
     </script>
